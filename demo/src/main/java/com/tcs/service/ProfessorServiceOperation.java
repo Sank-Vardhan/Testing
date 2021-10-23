@@ -22,7 +22,15 @@ public class ProfessorServiceOperation implements ProfessorService{
 	public Professor create(Professor professor) throws SQLException{
 		return professor;
 	}
+	@Override
+	public Student viewEnrolledStudnets(int courseId,int studentId) throws SQLException{
+		return student;
+	}
 	
+	@Override
+	public void addGrade(int courseId,int studentId) throws SQLException{
+		
+	}
 	
 
 }

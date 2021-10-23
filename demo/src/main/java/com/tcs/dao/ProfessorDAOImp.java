@@ -36,5 +36,26 @@ public class ProfessorDAOImp implements ProfessorDAOInterface {
 		s.executeUpdate();		
 		return professor;
 	}
+	
+	@Override
+	public Student viewEnrolledStudnets(int courseId,int studentId) throws SQLException{
+		String st = sql.GET_STUDENT_ID+ studentId;
+		PreparedStatement statement = con.prepareStatement(st);
+		System.out.println("DB Connected");
+		ResultSet rs= statement.executeQuery();
+		if (rs.next())
+			return new Student(rs.getInt("studentId"),rs.getString("name"),rs.getString("emailid"), rs.getString("branchname"), rs.getString("address"), rs.getBoolean("isapproved"), rs.getInt("roleid"));
+		return null;
+	}
+	
+	@Override
+	public void addGrade(int courseId,int studentId) throws SQLException{
+		PreparedStatement st1=con.preparedStatement(sql.ADD_GRADE);
+		st1.setString(1,course.getGrade());
+		st1.setString(2,course.getStudentId());
+		st1.setString(3,professor.getCourseCode());
+		st1.executeUpdate();
+		
+	}
 
 }

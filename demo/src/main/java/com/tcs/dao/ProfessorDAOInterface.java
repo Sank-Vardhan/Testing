@@ -9,5 +9,7 @@ public interface ProfessorDAOInterface {
 	public List list() throws SQLException;
 
 	public Professor insert(Professor professor) throws SQLException;
+	public Student viewEnrolledStudnets() throws SQLException;
+	public void addGrade(Course course,Student student) throws SQLException;
 
 }

@@ -28,7 +28,7 @@ public class SQLQueries {
 	 * 
 	 */
 	public static final String GET_ROLE="select role from user where userId = ? ";
-	public static final String GET_STUDENT_ID="select studentId from student where userId = ? ";
+	public static final String GET_STUDENT_ID="select studentId from student where courseCode in (select courseCode from Course where courseCode =?) ";
 	public static final String ADD_GRADE="update registeredcourse set grade=? where studentId=?  and courseCode=?";
 	
 	/**

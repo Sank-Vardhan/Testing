@@ -26,5 +26,21 @@ public class ProfessorRestController {
 		professor.create(prof);
 		return new ResponseEntity(professor, HttpStatus.OK);
 	}
+	
+	@PostMapping(value = "/post/professorGrade")
+	public ResponseEntity addGrade(@RequestBody Course c) throws SQLException {
+		course.create(c);
+		return new ResponseEntity(course, HttpStatus.OK);
+	}
+	
+	@RequestMapping(value="/professor/{id,id1}",method=RequestMethod.GET)
+	public ResponseEntity viewEnrolledStudnets(@PathVariable("id") int id,@PathVariable("id1") int id1) throws SQLException {
+		Course courseId=course.getCourseCode(id);
+		Student studentId=student.getId(id1);
+		if (studentId == null) {
+			return new ResponseEntity("No Student found with ID " + id, HttpStatus.NOT_FOUND);
+		}
+		return new ResponseEntity(studentId, HttpStatus.OK);
+	}
 
 }
