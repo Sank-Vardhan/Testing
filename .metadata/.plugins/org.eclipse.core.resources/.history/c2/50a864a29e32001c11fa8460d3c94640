@@ -1,0 +1,10 @@
+package com.tcs.service;
+
+import java.sql.SQLException;
+import java.util.List;
+
+public interface StudentService {
+
+	public List studentList() throws SQLException;
+
+}

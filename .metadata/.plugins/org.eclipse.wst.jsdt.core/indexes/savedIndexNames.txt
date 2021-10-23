@@ -1,0 +1,6 @@
+INDEX VERSION 1.4+D:\Acadmics\CRS-Imp\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+3435648363.index
+3428945127.index
+300696471.index
+3431024665.index
+4076150489.index

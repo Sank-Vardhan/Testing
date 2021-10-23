@@ -1,0 +1,13 @@
+package com.tcs.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.tcs.dao.ProfessorDAOInterface;
+
+public class ProfessorServiceOperation implements ProfessorService{
+	@Autowired
+	private ProfessorDAOInterface professor;
+	
+	
+
+}

@@ -1,0 +1,8 @@
+package com.tcs.dao;
+
+import java.sql.SQLException;
+import java.util.List;
+
+public interface StudentDAOInterface {
+	public List list() throws SQLException;
+}

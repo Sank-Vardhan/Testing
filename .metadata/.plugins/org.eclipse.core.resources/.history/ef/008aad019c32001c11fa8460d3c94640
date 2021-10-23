@@ -1,0 +1,10 @@
+package com.tcs.dao;
+
+import java.util.List;
+
+public class StudentDAOImp implements StudentDAOInterface{
+	public List list() {
+		return null;
+		
+	}
+}

@@ -1,0 +1,9 @@
+package com.tcs.service;
+
+import java.sql.SQLException;
+
+import com.tcs.bean.Professor;
+
+public interface ProfessorService {
+	public Professor create(Professor professor) throws SQLException;
+}

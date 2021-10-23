@@ -1,0 +1,18 @@
+package com.tcs.restController;
+
+import java.sql.SQLException;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+
+import com.tcs.service.ProfessorService;
+
+public class ProfessorRestController {
+	@Autowired
+	private ProfessorService professor;
+	
+	@GetMapping("/professor")
+	public List list() throws SQLException {
+		return professor.list();
+	}
+}
